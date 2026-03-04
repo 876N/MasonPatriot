@@ -12,6 +12,12 @@ MasonPatriot is a native Win32 protection tool designed to shield .NET assemblie
 
 ---
 
+![Assembly](https://i.ibb.co/99Sy96Tn/Assembly.png)
+
+After completing a course on Alison I built this project as a practical application of what I learned in x86 Assembly and low level Windows internals
+
+---
+
 ## Operational Overview
 
 MasonPatriot operates on a simple but effective doctrine. It takes your .NET assembly as input and produces a hardened native PE executable as output. The original .NET bytecode is encrypted and embedded inside a custom stub written entirely in x86 assembly. At runtime the stub performs a series of environment verification checks before decrypting and launching the payload through the CLR hosting interface. If any check fails the process is terminated immediately with no fallback and no mercy.
